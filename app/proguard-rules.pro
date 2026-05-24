@@ -1,0 +1,1 @@
+# Duogram minimal proguard rules

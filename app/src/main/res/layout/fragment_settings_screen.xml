@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Способы подключения" android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/transportGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton android:id="@+id/transportWebrtc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="WebRTC (P2P)" />
+            <RadioButton android:id="@+id/transportVps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Мой VPS/VDS" />
+            <RadioButton android:id="@+id/transportSocks" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SOCKS4/5" />
+            <RadioButton android:id="@+id/transportTor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tor / I2P" />
+            <RadioButton android:id="@+id/transportLan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LAN только" />
+        </RadioGroup>
+
+        <EditText android:id="@+id/vpsHostInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="VPS IP:PORT" />
+        <EditText android:id="@+id/vpsTokenInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="VPS token (optional)" />
+
+        <EditText android:id="@+id/socksHostInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="SOCKS host" />
+        <EditText android:id="@+id/socksPortInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="SOCKS port" android:inputType="number" />
+        <EditText android:id="@+id/socksLoginInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="SOCKS login" />
+        <EditText android:id="@+id/socksPasswordInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="SOCKS password" />
+
+        <Button android:id="@+id/saveTransportButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Сохранить подключение" />
+        <Button android:id="@+id/testConnectionButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Проверить подключение" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Приватность профиля" android:textStyle="bold" />
+        <CheckBox android:id="@+id/privacyAvatarAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Аватар всем" />
+        <CheckBox android:id="@+id/privacyLinksOff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ссылки скрыть" />
+        <Button android:id="@+id/savePrivacyButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Сохранить приватность" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Безопасность" android:textStyle="bold" />
+        <EditText android:id="@+id/pinInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="PIN приложения" android:inputType="numberPassword" />
+        <Switch android:id="@+id/appBioSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Биометрия приложения" />
+        <Switch android:id="@+id/selfDestructSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Стереть всё после 5 попыток" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Избранное" android:textStyle="bold" />
+        <EditText android:id="@+id/savedPinInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="PIN для заметок" android:inputType="numberPassword" />
+        <Switch android:id="@+id/savedBioSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Биометрия для заметок" />
+
+        <Button android:id="@+id/saveSecurityButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Сохранить безопасность" />
+
+    </LinearLayout>
+</ScrollView>

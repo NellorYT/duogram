@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatarView"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:src="@drawable/ic_duogram" />
+
+        <Button
+            android:id="@+id/changeAvatarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сменить аватар" />
+
+        <EditText
+            android:id="@+id/profileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Имя" />
+
+        <TextView
+            android:id="@+id/profileUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/profileBio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Био (до 200)" />
+
+        <EditText
+            android:id="@+id/profileLinks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ссылки (до 5, с новой строки)"
+            android:minLines="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Активный транспорт" />
+
+        <TextView
+            android:id="@+id/profileTransportValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Приватность аватара" />
+        <Spinner android:id="@+id/avatarVisibilitySpinner" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Приватность имени" />
+        <Spinner android:id="@+id/nameVisibilitySpinner" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Приватность био" />
+        <Spinner android:id="@+id/bioVisibilitySpinner" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Приватность ссылок" />
+        <Spinner android:id="@+id/linksVisibilitySpinner" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/saveProfileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить профиль" />
+
+        <Button
+            android:id="@+id/resetUsernameButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сбросить username" />
+
+        <Button
+            android:id="@+id/exportProfileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Экспортировать профиль JSON" />
+
+    </LinearLayout>
+</ScrollView>
